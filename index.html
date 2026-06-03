@@ -210,13 +210,17 @@
 
     .hero {
       max-width: 1180px;
-      min-height: calc(100vh - 136px);
+      min-height: auto;
       margin: 0 auto;
-      padding: clamp(48px, 7vw, 96px) clamp(18px, 4vw, 28px) 48px;
+      padding: clamp(24px, 3.5vw, 46px) clamp(18px, 4vw, 28px) 8px;
       display: grid;
       grid-template-columns: minmax(0, 0.92fr) minmax(420px, 1.08fr);
-      align-items: center;
-      gap: clamp(32px, 6vw, 72px);
+      align-items: start;
+      gap: clamp(64px, 9vw, 116px);
+    }
+
+    .hero-text {
+      padding-left: clamp(12px, 2vw, 28px);
     }
 
     .eyebrow {
@@ -234,6 +238,12 @@
       line-height: 0.94;
       letter-spacing: 0;
       color: var(--ink);
+    }
+
+    .hero h1 {
+      max-width: 720px;
+      font-size: clamp(1.85rem, 3.45vw, 3.65rem);
+      line-height: 1.04;
     }
 
     .highlight {
@@ -279,21 +289,22 @@
     .visual {
       position: relative;
       min-height: 500px;
+      max-width: 100%;
     }
 
     .logo-orbit {
       position: absolute;
       inset: 0 auto auto 50%;
-      width: min(540px, 88vw);
+      width: min(540px, 100%);
       aspect-ratio: 1.5 / 1;
       border-radius: 28px;
       background: linear-gradient(135deg, rgba(15, 107, 85, 0.14), rgba(245, 132, 31, 0.16));
-      transform: translateX(-50%) rotate(-2deg);
+      transform: translateX(-50%);
     }
 
     .hero-logo {
       position: relative;
-      width: min(520px, 88vw);
+      width: min(520px, 100%);
       margin: 24px auto 0;
       border-radius: 26px;
       box-shadow: var(--shadow);
@@ -302,8 +313,8 @@
 
     .preview {
       position: relative;
-      width: min(620px, 92vw);
-      margin: -22px auto 0;
+      width: min(520px, 100%);
+      margin: -78px auto 0;
       border: 1px solid rgba(9, 33, 61, 0.11);
       border-radius: 22px;
       overflow: hidden;
@@ -318,7 +329,7 @@
     }
 
     .modules-section {
-      padding: 24px clamp(18px, 4vw, 48px) 72px;
+      padding: 0 clamp(18px, 4vw, 48px) 72px;
     }
 
     .modules-inner {
@@ -377,6 +388,71 @@
       line-height: 1.48;
     }
 
+    .join-section {
+      padding: 56px clamp(18px, 4vw, 48px) 64px;
+      background: #eef6f3;
+    }
+
+    .join-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+      gap: clamp(28px, 6vw, 72px);
+      align-items: start;
+    }
+
+    .join-kicker {
+      margin: 0 0 12px;
+      color: var(--pine);
+      font-size: 0.82rem;
+      font-weight: 850;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .join-section h2 {
+      max-width: 520px;
+      line-height: 1.05;
+    }
+
+    .join-content {
+      color: #405266;
+      font-size: 1.02rem;
+      line-height: 1.6;
+    }
+
+    .join-content p {
+      margin: 0 0 18px;
+    }
+
+    .join-content h3 {
+      margin: 26px 0 10px;
+      color: var(--ink);
+      font-size: 1.16rem;
+      line-height: 1.2;
+    }
+
+    .join-content ul {
+      margin: 0 0 18px;
+      padding-left: 22px;
+    }
+
+    .join-content li {
+      margin: 7px 0;
+    }
+
+    .join-content strong {
+      color: var(--ink);
+    }
+
+    .site-footer {
+      padding: 0 clamp(18px, 4vw, 48px) 28px;
+      color: var(--muted);
+      font-size: 0.92rem;
+      text-align: center;
+    }
+
     .card-top {
       display: flex;
       align-items: center;
@@ -408,6 +484,10 @@
       .hero {
         min-height: auto;
         grid-template-columns: 1fr;
+      }
+
+      .hero-text {
+        padding-left: 0;
       }
 
       .visual {
@@ -459,16 +539,25 @@
       }
 
       .hero {
-        padding-top: 40px;
+        padding-top: 24px;
       }
 
       h1 {
         font-size: clamp(2.65rem, 16vw, 4rem);
       }
 
+      .hero h1 {
+        font-size: clamp(1.65rem, 8vw, 2.6rem);
+        line-height: 1.08;
+      }
+
       .section-head {
         align-items: flex-start;
         flex-direction: column;
+      }
+
+      .join-inner {
+        grid-template-columns: 1fr;
       }
 
       .visual {
@@ -529,7 +618,7 @@
                     <span>Pay Equity Analyzer AI</span>
                   </a>
 
-                  <p class="group-title">Talent Acquisition / Compensation Intelligence</p>
+                  <p class="group-title">Talent Acquisition / Comp Intelligence</p>
                   <a class="module-link" href="#offer-letter-optimizer">
                     <span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" /><path d="M4 6h16v14H4z" /><path d="M9 12h6" /></svg></span>
                     <span>Offer Letter Optimizer AI</span>
@@ -558,31 +647,27 @@
             </div>
           </div>
 
-          <a class="demo-link" href="#demo">Get a Demo</a>
+          <a class="demo-link" href="demo.html">Get a Demo</a>
         </div>
       </nav>
     </header>
 
     <main>
       <section class="hero">
-        <div>
-          <p class="eyebrow">Compensation intelligence for modern teams</p>
-          <h1>NorCal <span class="highlight">AI</span> Solutions LLC</h1>
-          <p class="hero-copy">
-            AI-powered planning, pay equity, retention, and offer intelligence modules for compensation teams that need faster decisions and clearer outcomes.
-          </p>
-          <div class="hero-actions">
-            <a class="button primary" href="#demo">Get a Demo</a>
-            <a class="button secondary" href="#modules">Explore Modules</a>
-          </div>
-        </div>
-
         <div class="visual" aria-hidden="true">
           <div class="logo-orbit"></div>
           <img class="hero-logo" src="companyLogo.png" alt="" />
           <div class="preview">
             <img src="compModules.png" alt="" />
           </div>
+        </div>
+
+        <div class="hero-text">
+          <p class="eyebrow">Compensation intelligence for modern teams</p>
+          <h1>Turn complex workforce and compensation decisions into smarter actions</h1>
+          <p class="hero-copy">
+            AI-powered planning, pay equity, retention, and offer intelligence modules for compensation teams that need faster decisions and clearer outcomes.
+          </p>
         </div>
       </section>
 
@@ -652,7 +737,49 @@
           </div>
         </div>
       </section>
+
+      <section class="join-section" id="careers">
+        <div class="join-inner">
+          <div>
+            <p class="join-kicker">Join our Team</p>
+            <h2>Join an Early-Stage AI Startup in the HCM Space</h2>
+          </div>
+
+          <div class="join-content">
+            <p>We are building innovative AI-powered solutions focused on Human Capital Management (HCM), Compensation, Benefits, Workforce Analytics, and related HR technology domains.</p>
+            <p>We are seeking individuals with strong functional expertise in one or more of the following areas:</p>
+
+            <ul>
+              <li>Human Capital Management (HCM)</li>
+              <li>Compensation Planning and Administration</li>
+              <li>Benefits Administration</li>
+              <li>Talent Management</li>
+              <li>Workforce Analytics</li>
+              <li>Payroll</li>
+              <li>HR Operations</li>
+              <li>Organizational Effectiveness</li>
+            </ul>
+
+            <p>The ideal candidate will bring practical business knowledge, industry experience, and a passion for helping shape next-generation AI solutions for HR professionals.</p>
+
+            <h3>What We're Looking For</h3>
+            <ul>
+              <li>Functional expertise in HCM or related HR disciplines</li>
+              <li>Ability to provide product guidance, requirements, and domain insights</li>
+              <li>Entrepreneurial mindset and willingness to contribute in a startup environment</li>
+              <li>Interest in AI and the future of HR technology</li>
+            </ul>
+
+            <h3>Compensation</h3>
+            <p>As an early-stage startup, we are currently offering <strong>equity-based positions only</strong>. While we are not yet able to provide salary compensation, this is an opportunity to become a foundational contributor and participate in the long-term growth and success of the company.</p>
+            <p>If you are excited about combining HR expertise with AI innovation and would like to help build something meaningful from the ground up, we would love to hear from you.</p>
+          </div>
+        </div>
+      </section>
     </main>
+    <footer class="site-footer">
+      <p>&copy; 2026 NorCal AI Solutions LLC. All rights reserved.</p>
+    </footer>
   </div>
 </body>
 </html>
