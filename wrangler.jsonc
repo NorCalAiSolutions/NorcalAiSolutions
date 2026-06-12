@@ -11,4 +11,7 @@
   "compatibility_flags": [
     "nodejs_compat"
   ]
+  # wrangler.toml
+    [[send_email]]
+     name = "EMAIL"
 }
