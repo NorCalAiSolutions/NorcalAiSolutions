@@ -3,6 +3,11 @@
   "name": "norcalaisolutions",
   "main": "index.js",
   "compatibility_date": "2026-06-02",
+  "vars": {
+    "EMAIL_FROM": "noreply@norcalaisolutions.net",
+    "EMAIL_TO": "akhil100@gmail.com",
+    "EMAIL_FROM_NAME": "NorCal AI Solutions"
+  },
   "observability": {
     "enabled": true
   },
